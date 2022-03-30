@@ -7,10 +7,26 @@
 
 import SwiftUI
 
+struct MovierModel {
+    let title: String
+    let director: String
+    let count: Int
+}
+
+typealias TVModel = MovierModel
+
 struct ContentView: View {
+    
+    //    @State private var item = MovierModel(title: "Ukraine", director: "God", count: 10)
+        @State private var item = TVModel(title: "USA", director: "Baiden", count: 7)
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text(item.title)
+            Text(item.director)
+            Text("\(item.count)")
+            Divider()
+        }
     }
 }
 
